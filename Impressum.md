@@ -96,7 +96,6 @@ Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im
 Falle der unverlangten Zusendung von Werbeinformationen, etwa durch
 Spam-Mails, vor.
 
-<strong>Quelle des Abschnitts "Haftungshinweis": </strong>S&amp;K
-Rechtsanwälte <a href="http://www.streifler.de" target="_blank"
->www.streifler.de</a>
+<strong>Quelle des Abschnitts "Haftungshinweis": </strong>
+S&amp;K Rechtsanwälte [www.streifler.de](http://www.streifler.de).
 

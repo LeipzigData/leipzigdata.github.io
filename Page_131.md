@@ -3,9 +3,6 @@ layout: default
 title: Post_131
 ---
 
-
-[Parent](Page_115)
-
 # Events
 
 <h1>Leipzig Data Events Framework</h1>
