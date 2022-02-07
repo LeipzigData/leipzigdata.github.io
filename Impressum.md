@@ -5,9 +5,9 @@ title: Impressum
 
 # Impressum
 
-Diese Website wird im Rahmen des <a
-href="http://www.dorfwiki.org/wiki.cgi?HansGertGraebe/NetzProjekt">Netzprojekts
-</a> an der <a href="https://www.uni-leipzig.de/impressum/">Universität
+Diese Website wird im Rahmen des
+[Netzprojekts](http://www.dorfwiki.org/wiki.cgi?HansGertGraebe/NetzProjekt)
+an der <a href="https://www.uni-leipzig.de/impressum/">Universität
 Leipzig</a> betrieben.
 
 <strong>Projektleitung und inhaltliche Verantwortung:</strong>
@@ -39,8 +39,8 @@ cc:license Attribut der einzelnen RDF Graphen hinterlegt ist.
 Die Transparenz der Information (§ 12, 13 (4), 14 (5), 15 <a
 href="https://www.iitr.de/eu-dsgvo">EUDATAP</a>) ist garantiert, da alle
 Informationen öffentlich sind. Bei der Verarbeitung personenbezogener Daten
-finden die für die <a href="http://uni-leipzig.de/service/datenschutz.html"
->Universität Leipzig gültigen Verhaltensregeln</a> sinngemäß Anwendung.
+finden die für die <a href="http://uni-leipzig.de/service/datenschutz.html">
+Universität Leipzig gültigen Verhaltensregeln</a> sinngemäß Anwendung.
 
 <h2>Haftungshinweis</h2>
 
