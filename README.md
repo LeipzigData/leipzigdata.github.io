@@ -1,2 +1,2 @@
 # leipzigdata.github.io
-github pages of the organisational account
+Github Pages of the Leipzig Data Project
