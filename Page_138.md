@@ -1,9 +1,10 @@
---
+---
 layout: default
-title: Page_138
+title: Post_138
 ---
 
-## Parent: [0](Page_0)
+
+[Parent](Page_0)
 
 # Kontakt
 

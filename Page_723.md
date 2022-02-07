@@ -1,9 +1,10 @@
---
+---
 layout: default
-title: Page_723
+title: Post_723
 ---
 
-## Parent: [0](Page_0)
+
+[Parent](Page_0)
 
 # Projektideen
 

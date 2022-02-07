@@ -1,9 +1,10 @@
---
+---
 layout: default
-title: Page_264
+title: Post_264
 ---
 
-## Parent: [0](Page_0)
+
+[Parent](Page_0)
 
 # Ein verteiltes semantisches soziales Netzwerk
 

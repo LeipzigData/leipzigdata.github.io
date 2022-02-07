@@ -1,9 +1,10 @@
---
+---
 layout: default
-title: Page_75
+title: Post_75
 ---
 
-## Parent: [0](Page_0)
+
+[Parent](Page_0)
 
 # Open Data in Leipzig
 

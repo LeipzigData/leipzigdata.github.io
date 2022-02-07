@@ -1,9 +1,10 @@
---
+---
 layout: default
-title: Page_50
+title: Post_50
 ---
 
-## Parent: [0](Page_0)
+
+[Parent](Page_0)
 
 # Anliegen
 

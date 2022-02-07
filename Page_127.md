@@ -1,9 +1,10 @@
---
+---
 layout: default
-title: Page_127
+title: Post_127
 ---
 
-## Parent: [0](Page_0)
+
+[Parent](Page_0)
 
 # Gelbe Seiten
 

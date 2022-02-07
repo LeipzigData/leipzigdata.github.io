@@ -1,9 +1,10 @@
---
+---
 layout: default
-title: Page_468
+title: Post_468
 ---
 
-## Parent: [0](Page_0)
+
+[Parent](Page_0)
 
 # Lizenzfragen
 

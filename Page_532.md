@@ -1,9 +1,10 @@
---
+---
 layout: default
-title: Page_532
+title: Post_532
 ---
 
-## Parent: [0](Page_0)
+
+[Parent](Page_0)
 
 # Technologien
 

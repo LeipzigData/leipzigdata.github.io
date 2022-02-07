@@ -1,9 +1,10 @@
---
+---
 layout: default
-title: Page_255
+title: Post_255
 ---
 
-## Parent: [0](Page_0)
+
+[Parent](Page_0)
 
 # Gartenplan
 

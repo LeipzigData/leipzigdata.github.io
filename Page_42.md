@@ -1,9 +1,10 @@
---
+---
 layout: default
-title: Page_42
+title: Post_42
 ---
 
-## Parent: [0](Page_0)
+
+[Parent](Page_0)
 
 # Glossar
 

@@ -1,9 +1,10 @@
---
+---
 layout: default
-title: Page_495
+title: Post_495
 ---
 
-## Parent: [0](Page_0)
+
+[Parent](Page_0)
 
 # Leipzig Data
 

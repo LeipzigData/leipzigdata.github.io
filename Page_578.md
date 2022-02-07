@@ -1,9 +1,10 @@
---
+---
 layout: default
-title: Page_578
+title: Post_578
 ---
 
-## Parent: [0](Page_0)
+
+[Parent](Page_0)
 
 # Lokale Installation
 

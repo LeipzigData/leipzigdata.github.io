@@ -1,9 +1,10 @@
---
+---
 layout: default
-title: Page_157
+title: Post_157
 ---
 
-## Parent: [0](Page_0)
+
+[Parent](Page_0)
 
 # Anwendungen
 

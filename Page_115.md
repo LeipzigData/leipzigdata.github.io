@@ -1,9 +1,10 @@
---
+---
 layout: default
-title: Page_115
+title: Post_115
 ---
 
-## Parent: [0](Page_0)
+
+[Parent](Page_0)
 
 # Leipzig Ontology
 

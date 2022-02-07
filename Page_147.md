@@ -1,9 +1,10 @@
---
+---
 layout: default
-title: Page_147
+title: Post_147
 ---
 
-## Parent: [0](Page_0)
+
+[Parent](Page_0)
 
 # Energieprojekt
 

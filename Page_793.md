@@ -1,9 +1,10 @@
---
+---
 layout: default
-title: Page_793
+title: Post_793
 ---
 
-## Parent: [0](Page_0)
+
+[Parent](Page_0)
 
 # Rechtliche Fragen
 

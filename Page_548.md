@@ -1,9 +1,10 @@
---
+---
 layout: default
-title: Page_548
+title: Post_548
 ---
 
-## Parent: [0](Page_0)
+
+[Parent](Page_0)
 
 # Geolokale Anwendungen
 

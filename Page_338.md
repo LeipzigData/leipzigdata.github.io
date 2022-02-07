@@ -1,9 +1,10 @@
---
+---
 layout: default
-title: Page_338
+title: Post_338
 ---
 
-## Parent: [0](Page_0)
+
+[Parent](Page_0)
 
 # Event-Vorlage
 

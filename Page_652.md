@@ -1,9 +1,10 @@
---
+---
 layout: default
-title: Page_652
+title: Post_652
 ---
 
-## Parent: [0](Page_0)
+
+[Parent](Page_0)
 
 # Das Netz-Projekt
 

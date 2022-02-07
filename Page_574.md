@@ -1,9 +1,10 @@
---
+---
 layout: default
-title: Page_574
+title: Post_574
 ---
 
-## Parent: [0](Page_0)
+
+[Parent](Page_0)
 
 # Wordpress Management
 

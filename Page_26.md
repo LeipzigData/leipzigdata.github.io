@@ -1,9 +1,10 @@
---
+---
 layout: default
-title: Page_26
+title: Post_26
 ---
 
-## Parent: [0](Page_0)
+
+[Parent](Page_0)
 
 # Open Data Philosophie
 

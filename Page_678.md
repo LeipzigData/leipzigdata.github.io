@@ -1,9 +1,10 @@
---
+---
 layout: default
-title: Page_678
+title: Post_678
 ---
 
-## Parent: [0](Page_0)
+
+[Parent](Page_0)
 
 # Gentrifizierung
 
