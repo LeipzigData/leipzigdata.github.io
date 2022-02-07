@@ -1,9 +1,9 @@
 ---
 layout: default
-title: ontology/Adressen
+title: LDO-Adressen
 ---
 
-<h1>Adressen und Geodaten der Stadt Leipzig</h1>
+<h1>LDO - Adressen und Geodaten der Stadt Leipzig</h1>
 <h2>Allgemeines</h2>
 
 Eine <em>Adresse</em> ist ein geolokaler Punkt in der Stadt Leipzig mit einer
@@ -35,7 +35,7 @@ werden können, wie Treffpunkte, Kinderspielplätze u.ä. Dafür wurde das
 Konzept <em>Treffpunkt</em> eingeführt, das aus einem Bezeichner und weiterer
 geolokaler Information besteht.
 
-In Anwendungen (etwa den <a href="ontology/events/">Events</a>) sind die
+In Anwendungen (etwa den <a href="LDO-Events">Events</a>) sind die
 standardisierten Adressen bis auf die Hausnummer aufgelöst. Weitere
 Informationen sind als Adresszusatz (ld:hasAddressAddendum) einzutragen.
 

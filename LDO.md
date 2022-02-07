@@ -1,9 +1,9 @@
 ---
 layout: default
-title: LeipzigOntology
+title: LDO
 ---
 
-<h1>LEO - Die Leipzig Ontology</h1>
+<h1>LDO - Die Leipzig Data Ontologie</h1>
 
 Das Leipzig Data Projekt hat sich das Ziel gestellt, einen gewissen Grundstock
 an Referenzdaten und insbesondere URIs im RDF-Format zu sammeln, mit denen
@@ -47,23 +47,23 @@ href="https://github.com/LeipzigData/RDFData">git-Repo</a> verfügbar. Sie sind
 nach Sachthemen geordnet:
 
 <ul>
-<li><a href="/ontology/AdministrativeGliederung">Administrative Gliederung der
+<li><a href="LDO-AdministrativeGliederung">Administrative Gliederung der
     Stadt Leipzig</a></li>
-<li><a href="/ontology/Adressen">Adressen und Geokoordinaten</a></li>
-<li><a href="/ontology/Akteure">Akteure, Einrichtungen, Unternehmen, Vereine
+<li><a href="LDO-Adressen">Adressen und Geokoordinaten</a></li>
+<li><a href="LDO-Akteure">Akteure, Einrichtungen, Unternehmen, Vereine
     in der Stadt Leipzig</a></li>
-<li><a href="/ontology/Events">Ausgewählte Events in der Stadt
+<li><a href="LDO-Events">Ausgewählte Events in der Stadt
     Leipzig</a></li>
-<li><a href="/ontology/Hochschulen">Leipziger Hochschuleinrichtungen</a></li>
-<li><a href="/ontology/Jugendstadtplan">Jugendstadtplan</a></li>
-<li><a href="/ontology/MINTBroschuere">MINT-Broschüre</a></li>
-<li><a href="/ontology/Orte">Orte in der Stadt Leipzig</a></li>
-<li><a href="/ontology/Referenzen">Referenzen</a></li>
-<li><a href="/ontology/Schulen">Schulen der Stadt Leipzig</a></li>
-<li><a href="/ontology/sonstiges">Sonstiges</a></li>
-<li><a href="/ontology/Stadtverwaltung">Stadt Leipzig
+<li><a href="LDO-Hochschulen">Leipziger Hochschuleinrichtungen</a></li>
+<li><a href="LDO-Jugendstadtplan">Jugendstadtplan</a></li>
+<li><a href="LDO-MINTBroschuere">MINT-Broschüre</a></li>
+<li><a href="LDO-Orte">Orte in der Stadt Leipzig</a></li>
+<li><a href="LDO-Referenzen">Referenzen</a></li>
+<li><a href="LDO-Schulen">Schulen der Stadt Leipzig</a></li>
+<li><a href="LDO-sonstiges">Sonstiges</a></li>
+<li><a href="LDO-Stadtverwaltung">Stadt Leipzig
     Verwaltungsstruktur</a></li>
-<li><a href="/ontology/Tags">Tags für verschiedene Auszeichnungen</a></li>
+<li><a href="LDO-Tags">Tags für verschiedene Auszeichnungen</a></li>
 </ul>
 
 <h2>Allgemeine Übersicht über den Datenbestand</h2>
@@ -121,7 +121,7 @@ Siehe auch die Änderungsanmerkungen in den untergeordneten Webseiten.
     Umbenennungen API-Referenzen.ttl zu Referenzen.ttl sowie StadtLeipzig.ttl
     zu Stadtverwaltung.ttl</li>
   <li>HGG 2017-09-04: Traeger.ttl aufgelöst,
-    siehe <a href="ontology/akteure/">Akteure</a></li>
+    siehe <a href="LDO-Akteure">Akteure</a></li>
   <li>HGG 2017-08: Abschalten des Linked Data Zugangs zu unseren Daten über
     OntoWiki wegen dauernder DOS-Attacken</li>
   <li>HGG 2013-10-20: Adress-URIs einheitlich in die Form

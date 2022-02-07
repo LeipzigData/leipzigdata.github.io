@@ -1,9 +1,9 @@
 ---
 layout: default
-title: ontology/AdministrativeGliederung
+title: LDO-AdministrativeGliederung
 ---
 
-<h1>Administrative Gliederung der Stadt Leipzig</h1>
+<h1>LDO - Administrative Gliederung der Stadt Leipzig</h1>
 
 <h2>Allgemeines</h2>
 
@@ -16,7 +16,7 @@ Ortsteilen.
 Es existieren weitere kleinteiligere Planunsstrukturen auf Blockebene, Straßen
 und Straßenabschnitten, die in verschiedenen Ämtern zudem verschieden
 zugeschnitten sind. Die kleinste Planungseinheit, die in Leipzig Data derzeit
-erfasst ist, ist die <a href="ontology/adressen/">Adresse</a> (Grundstück).
+erfasst ist, ist die <a href="LDO-Adressen">Adresse</a> (Grundstück).
 
 Die Straßen der Stadt Leipzig sind in
 einem <a href="https://www.leipzig.de/buergerservice-und-verwaltung/unsere-stadt/gebietsgliederung-und-strassennamen/strassennamen/">offiziellen
@@ -95,7 +95,7 @@ zusammengefasst.
   <li>RDF-Prädikate
     <ul>
       <li>ld:hasStadtRef URI - StadtId-URI,
-	siehe <a href="ontology/referenzen/">Referenzen</a></li>
+	siehe <a href="LDO-Referenzen">Referenzen</a></li>
       <li>rdfs:label Literal - Bezeichnung, z.B. "Anger-Crottendorf"</li>
     </ul>
   </li>

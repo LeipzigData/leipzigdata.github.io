@@ -14,6 +14,6 @@ Transition ist noch nicht abgeschlossen.
 - [Über das Leipzig Data Projekt](Anliegen)
 - [Privatheit](Disclaimer)
 - [Betreiberkonzept](Betreiberkonzept)
-- [Beschreibung der Leipzig Ontology](LeipzigOntology)
-  - [Administrative Gliederung](ontology/AdministrativeGliederung]
-  - [Adressen und Geokoordinaten](ontology/Adressen]
+- [Beschreibung der Leipzig Ontology](LDO)
+  - [Administrative Gliederung](LDO-AdministrativeGliederung)
+  - [Adressen und Geokoordinaten](LDO-Adressen)
