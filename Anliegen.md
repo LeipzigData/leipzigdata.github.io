@@ -15,10 +15,10 @@ einer freien Lizenz in digital adressierbarer Form öffentlich verfügbar sind.
 
 Im Fokus steht allerdings nicht so sehr <em>Open Data</em> als vielmehr
 <em>Free Speech</em>, da wir offene Daten nicht als Selbstzweck begreifen,
-sondern als unbedingte Voraussetzung für die <a href="vision">Freie Rede
+sondern als unbedingte Voraussetzung für die <a href="Vision">Freie Rede
 mündiger Bürger</a> über die sie betreffenden Angelegenheiten.
 
-Die Initiative setzt die Aktivitäten von <a href="API-Leipzig">API Leipzig</a>
+Die Initiative setzt die Aktivitäten von <a href="APILeipzig">API Leipzig</a>
 mit veränderter Schwerpunktsetzung fort und wurde von der Stadt Leipzig in
 einem Kurzzeitprojekt (Nov. 2012 bis April 2013) im Rahmen ihrer <a
 href="http://leipzig-netz.de/index.php/LD.OpenInnovation-12">“Open Innovation”
