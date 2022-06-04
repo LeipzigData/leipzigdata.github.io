@@ -26,8 +26,8 @@ Nach Abschalten der Linked Data Strukturen nach mehrfachen DOS-Attacken im
 August 2017 sind die aus unserem <a
 href="https://github.com/LeipzigData/RDFData/">git Repo</a> herunterladbaren
 Quellen die primären Datenquellen, die regelmäßig in einen <a
-href="https://leipzig-data.de:8890">RDF Data Store</a> geladen werden, über
-dessen <a href="https://leipzig-data.de:8890/sparql">SPARQL Endpunkt</a> auf
+href="http://leipzig-data.de:8890">RDF Data Store</a> geladen werden, über
+dessen <a href="http://leipzig-data.de:8890/sparql">SPARQL Endpunkt</a> auf
 die Daten zugegriffen werden kann.
 
 <h2>Inhalt dieser Seite</h2>
@@ -41,7 +41,7 @@ die Daten zugegriffen werden kann.
 <h2>Übersicht über die einzelnen RDF-Graphen</h2>
 
 Die Daten liegen jeweils als RDF-Graphen im Turtleformat vor und werden
-außerdem über unseren <a href="http://www.leipzig-data.de:8890/sparql">Sparql
+außerdem über unseren <a href="http://leipzig-data.de:8890/sparql">Sparql
 Endpunkt</a> ausgeliefert. Sie sind auch in unserem <a
 href="https://github.com/LeipzigData/RDFData">git-Repo</a> verfügbar. Sie sind
 nach Sachthemen geordnet:
