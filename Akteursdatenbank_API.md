@@ -15,11 +15,16 @@ um die entsprechenden Informationen bereitzustellen.  Die Plattform stellt
 eine REST-Schnittstelle zur Verfügung, über welche Informationen strukturiert
 im JSON-Format ausgelesen werden können.
 
+Auf einzelne Datensätze einer Klasse kann teilweise über deren Klassennamen
+und die id zugegriffen werden.
+
 ## Schnittstelle
+
 
 - <https://daten.nachhaltiges-sachsen.de/api/v1/activities.json>
   - Returns an array of all _activity_ objects. They are the core concept of
     this application.
+  - <https://daten.nachhaltiges-sachsen.de/api/v1/activities/12993.json>
 
 - <https://daten.nachhaltiges-sachsen.de/api/v1/categories.json>
   - Returns an array of all _category_ objects.
@@ -34,6 +39,7 @@ im JSON-Format ausgelesen werden können.
 - <https://daten.nachhaltiges-sachsen.de/api/v1/locations.json>
   - Returns an array of all _location_ objects. Locations can be referenced by
     users and activities.
+  - <https://daten.nachhaltiges-sachsen.de/api/v1/locations/15.json>
 
 - <https://daten.nachhaltiges-sachsen.de/api/v1/regions.json>
   - Returns an array of all _region_ objects.
@@ -52,6 +58,7 @@ im JSON-Format ausgelesen werden können.
 
 - <https://daten.nachhaltiges-sachsen.de/api/v1/users.json>
   - Returns an array of all _user_ objects. 
+  - <https://daten.nachhaltiges-sachsen.de/api/v1/users/106.json>
 
 ## Datenmodell - Übersicht
 
@@ -125,7 +132,7 @@ Prädikate in users.json:
 - ?? - Checkbox, veröffentlicht (nicht mit ausgeliefert)
 - ?? - Checkbox, aktiv (nicht mit ausgeliefert)
 - Adresse (des Akteurs oder des Ansprechpartners?)
-  - nur full_address, district, latlng, keine location_id
+  - nur full_address, district (nie initialisiert), latlng, keine location_id
 - ?? - Checkbox, Anschrift öffentlich sichtbar (nicht mit ausgeliefert)
 - Ansprechpartner
   - first_name - String
