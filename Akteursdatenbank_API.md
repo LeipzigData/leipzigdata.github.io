@@ -113,18 +113,19 @@ diese agierenden Personen unterschieden wird.
 
 Prädikate in users.json:
 - Akteur
-  - id - String
+  - id - Integer, URI des user-Objekts
   - name - String, Name der Organisation
-  - organization_type - String, Art der Organisation (gewerbliches
-    Unternehmen, gemeinnütziger Verein, Stiftung, Genossenschaft, Initiative,
-    Freiberufler, Bildungseinrichtung, Sonstige Organisation)
-  - organization_url - String, Homepage
-  - organization_logo\_url - String, Logo
+  - description - Text
+  - organization_type - String (Art der Organisation), Auswahl
+  - organization_url - URL, Homepage
+  - organization_logo_url - URL, Logo
+  - organization_logo_url_base - URL, Logo
 - ?? - Checkbox, Handels- oder Gastronomieeinrichtung (nicht mit
   ausgeliefert)
 - ?? - Checkbox, veröffentlicht (nicht mit ausgeliefert)
 - ?? - Checkbox, aktiv (nicht mit ausgeliefert)
 - Adresse (des Akteurs oder des Ansprechpartners?)
+  - nur full_address, district, latlng, keine location_id
 - ?? - Checkbox, Anschrift öffentlich sichtbar (nicht mit ausgeliefert)
 - Ansprechpartner
   - first_name - String
@@ -135,6 +136,7 @@ Prädikate in users.json:
   - phone_primary - String
   - phone_secondary - String
   - Passwort (nicht mit ausgeliefert)
+- region - Array, region-Objekt (id, name)
 
 ### Aktivitäten.
 
@@ -146,21 +148,55 @@ Aktivitäten zusammengefasst, wobei nicht alle Prädikate bei allen Untertypen
 verwendet werden. 
 
 Generische Prädikate:
-  - id - String
+  - id - Integer, URI des Objekts
   - type - String (Typ der Aktivität), Auswahl
   - user_id - String (Id des beteiligten Akteurs), Auswahl
   - name - (Titel, Name) String
   - description - (Beschreibung) String
   - Adresse (an der die Aktivität stattfindet) - Ortsauswahl
   - is_fallback_address - String (Boolescher Wert, Bedeutung unklar)
-  - info_url - String
-  - video_url - String
-  - image_url - String
+  - info_url - URL
+  - video_url - URL
+  - image_url - URL
+  - published - Boolean, ist der Eintrag publiziert?
   - categories - Array, weitere Kategorien (siehe Kategorienkonzept)
   - first_root_category - String, Hauptkategorie
+  - root_categories - Array, Bedeutung zu klären
+  - goals - Array, Bedeutung zu klären
+  - region - Array, region-Objekt
 
-Weitere Prädikate für Actions:
-  - start_at - String, Zeitraum/Termine (als Freitextfeld)
+Adresse besteht dabei aus:
+  - location_id -  Integer, URI des location-Objekts
+  - full_address - String, volle Adresse
+  - is_fallback_address - Boolean, Bedeutung unklar
+  - street_name, home_number, zip, city - die entsprechenden Adress-Elemente
+    - Bezug zu den gleichnamigen Adress-Elementen in der location_id ist zu
+      klären.
+  - latlng - Array (lat,lng)
+  - district - Bedeutung unklar, es gibt auch noch _region_.
+
+Weitere Prädikate:
+  - start_at - Datum/Zeit
+  - end_at - Datum/Zeit
+  - duration
+  - costs
+  - requirements
+  - speaker
+  - curriculum
+  - property_list
+  - target_group - (Zielgruppe) String, Freitextfeld
+  - costs - (Kosten) String, Freitextfeld
+  - requirements - (Bedingungen) String, Freitext-Area
+  - speaker - (Referenten) String, Freitextfeld
+  - Checkboxen free, child_friendly, accessible, climate_protection
+  - goals - (Ziele) Array, Mehrfachauswahl, wird aktuell nicht mit
+    ausgeliefert.
+  - target_group_selection 
+  - target_group - String, Zielgruppe
+  - education_type
+  - products, trade_categories, trade_types - Arrays, nur für type _Store_ 
+
+Das Folgende ist noch zu überarbeiten:
 
 Weitere Prädikate für Events:
   - start_at - String (mit Auswahl Datum/Zeit hinterlegt)
@@ -169,7 +205,7 @@ Weitere Prädikate für Events:
   - costs - (Kosten) String, Freitextfeld
   - requirements - (Bedingungen) String, Freitext-Area
   - speaker - (Referenten) String, Freitextfeld
-  - ?? - Checkboxen, kostenfrei, kinderfreundlich, barrierefrei (nicht
+  - Checkboxen, kostenfrei, kinderfreundlich, barrierefrei (nicht
     mit ausgeliefert) 
   - goals - (Ziele) Array, Mehrfachauswahl, wird aktuell nicht mit
     ausgeliefert.
@@ -206,19 +242,20 @@ Weitere Prädikate für Store:
 
 2021 wurde eine weitere Klasse __Orte__ ergänzt, die eine akteursübergreifende
 Verwaltung von Adressdaten umsetzt. Eine _Adresse_ ist dabei eine implizite
-Datenstruktur, die über die API als Menge von Attributen (nicht mehr aktuell)
-- full_address - String
-- district - String
-- latlng - Array
+Datenstruktur, die über die API als Menge von Attributen
+  - id - Integer, URI des location-Objekts
+  - name - String, Bezeichnung
+  - zip - PLZ
+  - city - Stadt
+  - street - Straße mit Hausnummer
+  - street_name - Straße
+  - house_number - Hausnummer (z.B. auch 16-18)
 
-ausgeliefert wird. <tt>full_address</tt> ist dabei bereits ein Aggregat, das
-aus den intern separierten Bestandteilen _Straße und Hausnummer_, _PLZ_ und
-_Ort_ kombiniert wurde.
-
-Adressen werden grundsätzlich als Datenaggregate verwaltet, nicht als
-Datenobjekte.  Wenn zu einer Aktivität keine Adresse angegeben ist, wird die
-Adresse aus den Profildaten des Akteurs übernommen.  Spätere Änderungen dieser
-Profildaten haben aber aktuell keine Auswirkung auf diesen Klon.
+In der bisherigen Modellierung wurden Adressen grundsätzlich als
+Datenaggregate verwaltet, nicht als Datenobjekte.  Wenn zu einer Aktivität
+keine Adresse angegeben ist, wird die Adresse aus den Profildaten des Akteurs
+übernommen.  Spätere Änderungen dieser Profildaten haben aber aktuell keine
+Auswirkung auf diesen Klon.
 
 Es ist eine akteursübergreifende Datenbank zu Orten im Aufbau, aus der häufig
 verwendete Adressdaten übernommen werden können.  Auch dies geschieht durch
@@ -237,12 +274,12 @@ Klasse.
 - <tt>categories</tt> repräsentiert eine baumartige Struktur verschiedener
   Tags, die einzelnen Aktivitäten zugewiesen sind.  Diese Struktur wird zur
   Menüführung verwendet.
-  - <tt>goals</tt> repräsentiert eine geordnete Liste verschiedener Tags, die
+- <tt>goals</tt> repräsentiert eine geordnete Liste verschiedener Tags, die
   einzelnen Aktivitäten zugewiesen sind. Das ist als Tagwolke modelliert, kann
   aber - mit Blick auf die Datenqualität - nur von einem Administrator
-  erweitert werden.
+  erweitert werden. Ist aktuell nicht mit im Editinterface.
 - <tt>products</tt> repräsentiert eine Liste verschiedener Produktkategorien,
-  die einzelnen Stores zugewiesen sind.
+  die einzelnen Stores zugewiesen werden können.
 - <tt>trade_types</tt> und <tt>trade_categories</tt> repräsentieren zwei
-  geordnete Listen verschiedener Tags, die einzelnen Akteuren über
-  Crossreferenz-Tabellen zugewiesen sind.
+  geordnete Listen verschiedener Tags, die einzelnen Store-Objekten zugewiesen
+  werden können.
