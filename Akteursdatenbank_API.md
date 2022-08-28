@@ -17,47 +17,53 @@ im JSON-Format ausgelesen werden können.
 
 ## Schnittstelle
 
-- https://daten.nachhaltiges-sachsen.de/api/v1/activities.json
+- <https://daten.nachhaltiges-sachsen.de/api/v1/activities.json>
   - Returns an array of all _activity_ objects. They are the core concept of
     this application.
 
-- https://daten.nachhaltiges-sachsen.de/api/v1/categories.json
+- <https://daten.nachhaltiges-sachsen.de/api/v1/categories.json>
   - Returns an array of all _category_ objects.
   - Activities may belong to one or more categories and subcategories. Each
     activity can have one or more goals, think of them as „tags“.
   - The count for each goal_cloud object (?) shows how many activities from
     each category use each goal. Use this to build a tag cloud.
 
-- https://daten.nachhaltiges-sachsen.de/api/v1/locations.json
+- <https://daten.nachhaltiges-sachsen.de/api/v1/goals.json>
+  - Returns an array of all _goal_ objects. 
+
+- <https://daten.nachhaltiges-sachsen.de/api/v1/locations.json>
   - Returns an array of all _location_ objects. Locations can be referenced by
     users and activities.
 
-- https://daten.nachhaltiges-sachsen.de/api/v1/regions.json
+- <https://daten.nachhaltiges-sachsen.de/api/v1/regions.json>
   - Returns an array of all _region_ objects.
 
-- https://daten.nachhaltiges-sachsen.de/api/v1/products.json
+- <https://daten.nachhaltiges-sachsen.de/api/v1/products.json>
   - Returns an array of all _product_ objects. They are specific to the
     activity type _Filiale_.
 
-- https://daten.nachhaltiges-sachsen.de/api/v1/trade_categories.json
+- <https://daten.nachhaltiges-sachsen.de/api/v1/trade_categories.json>
   - Returns an array of all <em>trade_category</em> objects. They are specific
     to the activity type _Filiale_.
 
-- https://daten.nachhaltiges-sachsen.de/api/v1/trade_types.json 
+- <https://daten.nachhaltiges-sachsen.de/api/v1/trade_types.json>
   - Returns an array of all <em>trade_type</em> objects. They are specific to
     the activity type _Filiale_.
 
-- https://daten.nachhaltiges-sachsen.de/api/v1/users.json
+- <https://daten.nachhaltiges-sachsen.de/api/v1/users.json>
   - Returns an array of all _user_ objects. 
 
-## Datenmodell
+## Datenmodell - Übersicht
 
-Im Modell werden die zwei Klassen _Akteure_ (<tt>users</tt>) und _Aktivitäten_
-(<tt>activities</tt>) unterschieden, welche über die REST-API ausgelesen
-werden können.  Im Modell sind weitere Datenstrukturen implizit als Konzepte
-vorhanden.
+Im Modell wurden zunächst die zwei Klassen _Akteure_ (<tt>users</tt>) und
+_Aktivitäten_ (<tt>activities</tt>) unterschieden, welche über die REST-API
+ausgelesen werden können. Eine dritte Klasse _Orte_ (<tt>locations</tt>) wurde
+2020 eingeführt. Weitere kleinere Strukturen existieren als Werte einer
+morphologischen Tabelle (categories, goals, regions, products, ...), deren
+Bedeutung noch genauer beschrieben werden muss.
 
-Das ist zum einen eine genauere Aufteilung eines _Akteurs_ in
+Im Modell sind weitere Datenstrukturen implizit als Konzepte vorhanden.  Das
+ist zum einen eine genauere Aufteilung eines _Akteurs_ in
 - die Beschreibung des Akteurs,
 - die Adresse,
 - der Ansprechpartner und
@@ -97,33 +103,7 @@ Servicetypen _Ressourcen_, _Bildungsangebot_ und _Beratungsangebot_ angeboten.
 Zur Unterscheidung der Instanzen werden ID's als numerische Primärschlüssel
 der Datenbank verwendet. 
 
-### Location (Adressen)
-
-In der Anforderungsbeschreibung Ende 2017 sollte eine weitere Klasse _Orte_
-ergänzt werden, die eine akteursübergreifende Verwaltung von Adressdaten
-umsetzt. Eine _Adresse_ ist dabei eine implizite Datenstruktur, die über die
-API als Menge von Attributen (nicht mehr aktuell)
-- full_address - String
-- district - String
-- latlng - Array
-
-ausgeliefert wird. <tt>full_address</tt> ist dabei bereits ein Aggregat, das
-aus den intern separierten Bestandteilen _Straße und Hausnummer_, _PLZ_ und
-_Ort_ kombiniert wurde.
-
-Adressen werden grundsätzlich als Datenaggregate verwaltet, nicht als
-Datenobjekte.  Wenn zu einer Aktivität keine Adresse angegeben ist, wird die
-Adresse aus den Profildaten des Akteurs übernommen.  Spätere Änderungen dieser
-Profildaten haben aber aktuell keine Auswirkung auf diesen Klon.
-
-Es ist eine akteursübergreifende Datenbank zu Orten im Aufbau, aus der häufig
-verwendete Adressdaten übernommen werden können.  Auch dies geschieht durch
-einfache Übernahme der entsprechenden Attributwerte. Geplant ist, Änderungen
-in dieser Datenbasis in die entsprechenden Adressfelder von Aktivitäten (und
-auch Akteuren?) zu propagieren, wozu ein System von Backlinks aufgebaut werden
-müsste. Unklar bleibt, wie mit zwischenzeitlichen Änderungen umgegangen wird,
-die vom Besitzer der Aktivität an den früher übernommenen Adressdaten
-vorgenommen worden sind.
+## Beschreibung einzelner Klassen
 
 ### Akteure.
 
@@ -221,6 +201,34 @@ Weitere Prädikate für Store:
   - products - Array
   - trade_categories - Array
   - trade_types - Array
+
+### Orte
+
+2021 wurde eine weitere Klasse __Orte__ ergänzt, die eine akteursübergreifende
+Verwaltung von Adressdaten umsetzt. Eine _Adresse_ ist dabei eine implizite
+Datenstruktur, die über die API als Menge von Attributen (nicht mehr aktuell)
+- full_address - String
+- district - String
+- latlng - Array
+
+ausgeliefert wird. <tt>full_address</tt> ist dabei bereits ein Aggregat, das
+aus den intern separierten Bestandteilen _Straße und Hausnummer_, _PLZ_ und
+_Ort_ kombiniert wurde.
+
+Adressen werden grundsätzlich als Datenaggregate verwaltet, nicht als
+Datenobjekte.  Wenn zu einer Aktivität keine Adresse angegeben ist, wird die
+Adresse aus den Profildaten des Akteurs übernommen.  Spätere Änderungen dieser
+Profildaten haben aber aktuell keine Auswirkung auf diesen Klon.
+
+Es ist eine akteursübergreifende Datenbank zu Orten im Aufbau, aus der häufig
+verwendete Adressdaten übernommen werden können.  Auch dies geschieht durch
+einfache Übernahme der entsprechenden Attributwerte. Geplant ist, Änderungen
+in dieser Datenbasis in die entsprechenden Adressfelder von Aktivitäten (und
+auch Akteuren?) zu propagieren, wozu ein System von Backlinks aufgebaut werden
+müsste. Unklar bleibt, wie mit zwischenzeitlichen Änderungen umgegangen wird,
+die vom Besitzer der Aktivität an den früher übernommenen Adressdaten
+vorgenommen worden sind.
+
 
 ### Weitere Teile der Modellierung.
 

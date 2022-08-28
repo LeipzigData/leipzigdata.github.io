@@ -20,12 +20,12 @@ Plattformen angezeigt zu werden, welche über die [API](Akteursdatenbank.API)
 der Akteursdatenbank ausgewählte Informationen übernehmen. 
 
 Auswahl angeschlossener Webseiten:
-- https://www.nachhaltiges-leipzig.de
-- https://www.leipzig-handelt-fair.de
-- https://ernaehrungsrat-leipzig.org
-- https://zukunftsakademie-leipzig.de
-- http://www.leipziggruen.de
-- https://www.nachhaltiges-sachsen.de
+- <https://www.nachhaltiges-leipzig.de>
+- <https://www.leipzig-handelt-fair.de>
+- <https://ernaehrungsrat-leipzig.org>
+- <https://zukunftsakademie-leipzig.de>
+- <http://www.leipziggruen.de>
+- <https://www.nachhaltiges-sachsen.de>
 
 ## Betreiber
 
@@ -43,7 +43,7 @@ Plattform stellt eine REST-Schnittstelle zur Verfügung, über welche
 Informationen strukturiert ausgelesen und in eigene Web-Darstellungen
 eingebunden werden können.
 
-- [Zum Hintergrund](Akteursdatenbank.Hintergrund)
-- [API](Akteursdatenbank.API)
+- [Zum Hintergrund](Akteursdatenbank_Hintergrund)
+- [API](Akteursdatenbank_API)
 
 
