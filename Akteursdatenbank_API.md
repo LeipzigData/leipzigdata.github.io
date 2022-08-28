@@ -272,8 +272,7 @@ vorgenommen worden sind.
 Diese sind noch wenig ausgearbeitet und enthalten oft nur wenige Instanzen pro
 Klasse. 
 - <tt>categories</tt> repräsentiert eine baumartige Struktur verschiedener
-  Tags, die einzelnen Aktivitäten zugewiesen sind.  Diese Struktur wird zur
-  Menüführung verwendet.
+  Tags, die einzelnen Aktivitäten zugewiesen sind. 
 - <tt>goals</tt> repräsentiert eine geordnete Liste verschiedener Tags, die
   einzelnen Aktivitäten zugewiesen sind. Das ist als Tagwolke modelliert, kann
   aber - mit Blick auf die Datenqualität - nur von einem Administrator
