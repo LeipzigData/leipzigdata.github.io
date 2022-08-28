@@ -51,7 +51,7 @@ Endpunkt</a> des Open Data Portals ausgelesen werden.
     <ul>
       <li>Die <a title="LD.OpenInnovation-12"
       href="http://www.leipzig-netz.de/index.php/LD.OpenInnovation-12">Ausschreibung</a></li>
-      <li>Damals gesammelte [Projektideen](Projektideen)</li>
+      <li>Damals gesammelte [Projektideen](Projektideen) </li>
       <li><a href="http://leipzig-data.de/Upload/Erfahrungsbericht.pdf" target="‘_blank’">Erfahrungsbericht</a> (Hans-Gert Gräbe, Oktober 2013)</li>
     </ul>
   </li>
