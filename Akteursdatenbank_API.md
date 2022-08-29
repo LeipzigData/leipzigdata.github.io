@@ -156,17 +156,25 @@ verwendet werden.
 
 Generische Prädikate:
   - id - Integer, URI des Objekts
-  - type - String (Typ der Aktivität), Auswahl
+  - type - String (Typ der Aktivität)
+    - Auswahl: Project (84), Service (95), Event (2280), Store (290)
+    - In Klammern Zahl der Instanzen, Stand vom 29.08.2022
+  - service_type - String (Typ der Aktivität)
+    - Auswahl: Projekt, Bildungsangebot, Veranstaltung, Filiale,
+      Beratungsangebot
+    - 29.08.2022: Doppelt die durch _type_ gegebene Auswahl.
   - user_id - String (Id des beteiligten Akteurs), Auswahl
-  - name - (Titel, Name) String
-  - description - (Beschreibung) String
-  - Adresse (an der die Aktivität stattfindet) - Ortsauswahl
-  - is_fallback_address - String (Boolescher Wert, Bedeutung unklar)
+  - name - String (Titel, Name) 
+  - description - Text (Beschreibung) 
+  - Adresse (an der die Aktivität stattfindet) - Ortsauswahl, s.u.
+  - is_fallback_address - Boolean (Bedeutung unklar)
   - info_url - URL
   - video_url - URL
   - image_url - URL
   - published - Boolean, ist der Eintrag publiziert?
-  - categories - Array, weitere Kategorien (siehe Kategorienkonzept)
+    - Nur publizierte Instanzen werden gelistet  
+  - categories - Array, weitere Kategorien (siehe Kategorienkonzept, zu
+    ergänzen)  
   - first_root_category - String, Hauptkategorie
   - root_categories - Array, Bedeutung zu klären
   - goals - Array, Bedeutung zu klären
