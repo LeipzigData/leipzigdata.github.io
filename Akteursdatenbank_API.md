@@ -5,8 +5,6 @@ title: Akteursdatenbank_API
 
 # Leipziger Akteursdatenbank - die API
 
-Diese Ausführungen müssen noch weiter aktualisiert werden. 
-
 ## Allgemeines
 
 Die Anbieter nutzen eine
@@ -16,30 +14,34 @@ eine REST-Schnittstelle zur Verfügung, über welche Informationen strukturiert
 im JSON-Format ausgelesen werden können.
 
 Auf einzelne Datensätze einer Klasse kann teilweise über deren Klassennamen
-und die id zugegriffen werden.
+und die _id_ zugegriffen werden.
+
+Achtung - die intern vergebenen IDs der Art #(nr) und die _id_ in der REST-API
+stimmen nicht überein.
 
 ## Schnittstelle
-
 
 - <https://daten.nachhaltiges-sachsen.de/api/v1/activities.json>
   - Returns an array of all _activity_ objects. They are the core concept of
     this application.
-  - <https://daten.nachhaltiges-sachsen.de/api/v1/activities/12993.json>
+  - Beispielhafter Zugriff auf eine Instanz:
+    <https://daten.nachhaltiges-sachsen.de/api/v1/activities/12993.json>
 
 - <https://daten.nachhaltiges-sachsen.de/api/v1/categories.json>
   - Returns an array of all _category_ objects.
-  - Activities may belong to one or more categories and subcategories. Each
-    activity can have one or more goals, think of them as „tags“.
-  - The count for each goal_cloud object (?) shows how many activities from
-    each category use each goal. Use this to build a tag cloud.
+  - Activities may belong to one or more categories and subcategories. 
 
 - <https://daten.nachhaltiges-sachsen.de/api/v1/goals.json>
-  - Returns an array of all _goal_ objects. 
+  - Returns an array of all _goal_ objects.
+  - Each activity can have one or more goals, think of them as „tags“.
+  - The count for each goal_cloud object (?) shows how many activities from
+    each category use each goal. Use this to build a tag cloud.
 
 - <https://daten.nachhaltiges-sachsen.de/api/v1/locations.json>
   - Returns an array of all _location_ objects. Locations can be referenced by
     users and activities.
-  - <https://daten.nachhaltiges-sachsen.de/api/v1/locations/15.json>
+  - Beispielhafter Zugriff auf eine Instanz:
+    <https://daten.nachhaltiges-sachsen.de/api/v1/locations/15.json>
 
 - <https://daten.nachhaltiges-sachsen.de/api/v1/regions.json>
   - Returns an array of all _region_ objects.
@@ -58,7 +60,8 @@ und die id zugegriffen werden.
 
 - <https://daten.nachhaltiges-sachsen.de/api/v1/users.json>
   - Returns an array of all _user_ objects. 
-  - <https://daten.nachhaltiges-sachsen.de/api/v1/users/106.json>
+  - Beispielhafter Zugriff auf eine Instanz:
+    <https://daten.nachhaltiges-sachsen.de/api/v1/users/106.json>
 
 ## Datenmodell - Übersicht
 
@@ -123,7 +126,10 @@ Prädikate in users.json:
   - id - Integer, URI des user-Objekts
   - name - String, Name der Organisation
   - description - Text
-  - organization_type - String (Art der Organisation), Auswahl
+  - organization_type - String (Art der Organisation)
+    - Auswahl: corporation (117), freelancer (26), club (134), collective (8),
+      other (58), initiative (48), educational (29), foundation (4), null (7)
+    - In Klammern Zahl der Instanzen, Stand vom 29.08.2022
   - organization_url - URL, Homepage
   - organization_logo_url - URL, Logo
   - organization_logo_url_base - URL, Logo
