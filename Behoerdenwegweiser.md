@@ -5,11 +5,14 @@ title: Behoerdenwegweiser
 
 <h2>Der Behördenwegweiser der Stadt Leipzig</h2>
 
-Der Behördenwegweiser der Stadt Leipzig wird über
-den <a href="https://opendata.leipzig.de/virt-sparql">SPARQL Endpunkt</a> des
-Open Data Portals der Stadt Leipzig angeboten.   Die folgende Ontologie wurde
+Der Behördenwegweiser der Stadt Leipzig wird über den <a
+href="https://opendata.leipzig.de/virt-sparql">SPARQL Endpunkt</a> des Open
+Data Portals der Stadt Leipzig angeboten. Die folgende Ontologie wurde 2018
 aus einer Analyse der Daten auf dem RDF Store extrahiert. Die genaue
 semantische Bedeutung der einzelnen Prädikate bleibt weiter zu erschließen.
+
+Es scheint, dass die Daten seit 2012 nicht weiter aktualisiert wurden.
+
 <h2>Relevante RDF-Graphen</h2>
 <ul>
   <li><a href="http://leipzig-data.de/RDFData/Behoerdenwegweiser.ttl">http://leipzig-data.de/RDFData/Behoerdenwegweiser.ttl</a> (ein Dump aus dem Open Data Portal)</li>
